@@ -1,0 +1,157 @@
+<html>
+<head>
+  <title>Proyecto de Conocimiento</title>
+  <style>
+
+  body {
+    background-image: url("Material/fondo.jpg");
+  }
+
+  .box {
+    width: 1650px;
+    height: 800px;
+    background-color: white;
+    border-radius: 20px;
+    opacity: 0.85;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 40px;
+    padding: 30px;
+  }
+
+  #menu {
+    list-style: none;
+    margin: 0;
+    margin-left: 40;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 20px;
+  }
+
+  #menu li {
+    float: left;
+  }
+
+  #menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  #menu li a:hover {
+    background-color: #111;
+  }
+
+  #menu li ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+  }
+
+  #menu li:hover ul {
+    display: block;
+  }
+
+  #menu li ul li {
+    float: none;
+  }
+
+  #menu li ul li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  #menu li ul li a:hover {
+    background-color: #111;
+  }
+
+  iframe {
+    width: 1570px;
+    height: 580px;
+    margin-left: 45;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000;
+  }
+
+  a:hover {
+    color: #00f;
+  }
+
+  </style>
+</head>
+<body>
+</div>
+  <div class="box">
+  <p style="text-align: center; font-size: 30px; font-family: 'Arial'"><img src="Material/Logo_Fractalia2.png" width="350" height="100" />     Proyecto de conocimiento</p>
+  <hr>
+
+  <table>
+    <tr>
+      <td>
+        <ul id="menu">
+          <li><a href="index.html"><img src="Material/home.png" width="20" height="20"/></a></li>
+          <li><a href="#">PMS</a>
+            <ul>
+              <li><a href="#" onclick="cambiarRecuadro('Conocimiento/PMS/Sihot.html')">SIHOT</a></li>
+              <li><a href="#" onclick="cambiarRecuadro('Conocimiento/PMS/OPERA.html')">OPERA 5.5</a></li>
+              <li><a href="#" onclick="cambiarRecuadro('Conocimiento/PMS/OPERACLOUD.html')">OPERA CLOUD</a></li>
+            </ul>
+          </li>
+          <li><a href="#" onclick="cambiarRecuadro('Conocimiento/PERLES/PERLES.html')">PERLE</a></li>
+          <li><a href="#">REVO</a>
+            <ul>
+              <li><a href="#" onclick="cambiarRecuadro('Conocimiento/REVO/REVOxef.html')">COMPROBACIONES PREVIAS</a></li>
+              <li><a href="#" onclick="cambiarRecuadro('Conocimiento/REVO/TIPOSREVO.html')">TIPOS DE REVO</a></li>
+            </ul>
+          </li>
+          <li><a href="#">SOFTWARE</a>
+            <ul>
+              <li><a href="#">SAP</a></li>
+              <li><a href="#" onclick="cambiarRecuadro('Conocimiento/SOFTWARE/MFA.html')">MFA</a></li>
+              <li><a href="#">SIRIUS</a></li>
+            </ul>
+          </li>
+          <li><a href="#">LLAVES</a>
+            <ul>
+              <li><a href="#" onclick="cambiarRecuadro('Conocimiento/LLAVES/ONITY.html')">ONITY</a></li>
+              <li><a href="#" onclick="cambiarRecuadro('Conocimiento/LLAVES/SALTO.html')">SALTO</a></li>
+              <li><a href="#" onclick="cambiarRecuadro('Conocimiento/LLAVES/INHOVA.html')">INHOVA</a></li>
+              <li><a href="#" onclick="cambiarRecuadro('Conocimiento/LLAVES/VISION.html')">VISION</a></li>
+            </ul>
+          </li>
+          <li><a href="#">OPCIÓN 6</a></li>
+          <li><a href="#">OPCIÓN 7</a></li>
+          <li><a href="#">OPCIÓN 8</a></li>
+          <li><a href="#">OPCIÓN 9</a></li>
+          <li><a href="#">OPCIÓN 10</a></li>
+          <li><a href="#">OPCIÓN 11</a></li>
+          <li><a href="#">OPCIÓN 12</a></li>
+          <li><a href="#" onclick="cambiarRecuadro('Material/Paradas.html')">PARADAS PROGRAMADAS</a></li>
+          <li><a href="buscador.html"><b>BUSCADOR</b></a></li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <iframe id="recuadro" src="Material/Inicio.html"></iframe>
+
+<script>
+function cambiarRecuadro(nuevaPagina) {
+  var recuadro = document.getElementById('recuadro');
+  recuadro.src = nuevaPagina;
+}
+</script>
+
+</body>
+</html>

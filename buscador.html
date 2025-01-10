@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buscador HTML</title>
+  <style>
+    #results {
+      display: none;
+    }
+
+      body {
+        background-image: url("Material/fondo.jpg");
+      }
+
+      .box {
+        width: 1650px;
+        height: 800px;
+        background-color: white;
+        border-radius: 20px;
+        opacity: 0.85;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 40px;
+        padding: 30px;
+      }
+
+      #menu {
+        list-style: none;
+        margin: 0;
+        margin-left: 40;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        border-radius: 20px;
+      }
+
+      #menu li {
+        float: left;
+        color:White
+      }
+
+      #menu li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      #menu li a:hover {
+        background-color: #111;
+        color:White
+      }
+
+      #menu li ul {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        color:White
+      }
+
+      #menu li:hover ul {
+        display: block;
+        color:White
+      }
+
+      #menu li ul li {
+        float: none;
+        color:White
+      }
+
+      #menu li ul li a {
+        display: block;
+        color: white;
+        text-align: left;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      #menu li ul li a:hover {
+        background-color: #111;
+        color:White
+      }
+
+      iframe {
+        width: 1570px;
+        height: 580px;
+        margin-left: 45;
+      }
+
+      a {
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color:White
+      }
+
+      a:hover {
+        color:White
+      }
+
+  </style>
+</head>
+<body>
+<a href="index.html"><h2><img src="Material/home.png" width="20" height="20"/> INICIO</h2></a>
+  <center>
+  <h1 style="color:White;">Buscador de conocimiento MHI</h1>
+
+  <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="performSearch()">
+
+  <ul id="results">
+    <li><a href="#">Correo</a></li>
+    <li><a href="#">Outlook</a></li>
+    <li><a href="Conocimiento/REVO/TIPOSREVO.html" target="_blank">REVO - Tipos de revo</a></li>
+    <li><a href="Conocimiento/REVO/REVOxef.html" target="_blank">REVO - Comprobaciones previas</a></li>
+    <li><a href="Conocimiento/LLAVES/SALTO.html" target="_blank">LLAVES - SALTO</a></li>
+    <li><a href="Conocimiento/LLAVES/ONITY.html" target="_blank">LLAVES - ONITY</a></li>
+    <li><a href="Conocimiento/LLAVES/INHOVA.html" target="_blank">LLAVES - INHOVA</a></li>
+    <li><a href="Conocimiento/LLAVES/VISION.html" target="_blank">LLAVES - VISION</a></li>
+    <li><a href="#">Opera 5.5</a></li>
+    <li><a href="#">Opera 5.4</a></li>
+    <li><a href="#">Opera Cloud</a></li>
+    <li><a href="#">Sihot</a></li>
+    <li><a href="#">Proveedor</a></li>
+    <li><a href="Conocimiento/PERLES/PERLES.html" target="_blank">Perle</a></li>
+    <!-- Añadir más elementos <li> según necesidades -->
+  </ul>
+  <script>
+    function performSearch() {
+      var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      var results = document.getElementById('results').getElementsByTagName('li');
+      var resultsContainer = document.getElementById('results');
+
+      if (searchTerm === '') {
+        resultsContainer.style.display = 'none';
+      } else {
+        resultsContainer.style.display = 'block';
+
+        for (var i = 0; i < results.length; i++) {
+          var linkText = results[i].getElementsByTagName('a')[0].textContent.toLowerCase();
+
+          if (linkText.includes(searchTerm)) {
+            results[i].style.display = '';
+          } else {
+            results[i].style.display = 'none';
+          }
+        }
+      }
+    }
+  </script>
+  </center>
+</body>
+</html>
